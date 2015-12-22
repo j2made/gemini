@@ -15,18 +15,21 @@ The boilerplace includes a theme, *Skylab*, which a barest of barebone theme tha
 
 ## Usage
 
-- Clone this repo. Edit `composer.json` to add plugins that you require, then run `composer install`.
+- Clone this repo. Edit `composer.json` to add plugins that you require, there's a few recommended in there already. 
+- Run `composer install`. 
 - Open `cms/wp-config.php` and change the definitions to match your database.
 - Wordpress can be accessed by visiting `example.com/cms`, the backend at `example.com/cms/wp/wp-login.php`.
 - All front end architecture should be housed within `/app`.
 
 
-## "Cool, its a ready to use REST API theme."
+### "Cool, its a ready to use REST API theme."
 
 **Nope.**
 
-Gemini is *not* a framework. Gemini is *not* a useful Wordpress theme out of the box. Gemini is *not* a javascript REST API anything out of the box.
+Gemini is *not* a framework. Gemini is *not* a typical, useful Wordpress theme out of the box. Gemini is *not* a javascript REST API anything out of the box.
 
-Gemini is, at its most basic, a way of arranging files to keep Wordpress and your future app together in one primary folder. Nothing too fancy.
+To be honest, there are tons of options you have available. This
+
+Gemini is, at its most basic, an opinionated way of arranging files to keep Wordpress and your future app together in one primary folder. Nothing too fancy.
 
 
