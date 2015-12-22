@@ -1,0 +1,110 @@
+{
+  "name": "gemini",
+  "type": "project",
+  "license": "MIT",
+  "description": "Launch a decoupled Wordpress mission",
+  "homepage": "https://github.com/j2made/gemini",
+  "authors": [
+    {
+      "name": "Shaun M. Baer",
+      "email": "sbaer@j2made.com",
+      "homepage": "https://github.com/iamhexcoder"
+    },
+    {
+      "name": "Daniel Olson",
+      "email": "emaildano@gmail.com",
+      "homepage": "https://github.com/emaildano"
+    }
+  ],
+  "keywords": [
+    "wordpress", "stack", "rest-api", "wp-rest-api", "composer", "theme", "wp"
+  ],
+  "support": {
+    "homepage": "https://github.com/j2made/gemini/issues"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "vendor-dir": "lib/vendor/"
+  },
+  "scripts": {
+    "pre-install-cmd": [
+      "php -r \"if(!file_exists('cms/wp-config.php')) { copy('cms/lib/samples/wp-config-sample.php', 'cms/wp-config.php'); }\""
+    ]
+  },
+  "minimum-stability": "beta",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wp-api/basic-auth",
+        "version": "0.1.0",
+        "type": "wordpress-muplugin",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/WP-API/Basic-Auth",
+          "reference": "origin"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wp-api/wp-api",
+        "version": "2.0-beta9",
+        "type": "wordpress-muplugin",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/WP-API/WP-API",
+          "reference": "origin"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "times/acf-wp-api",
+        "version": "1.3.2",
+        "type": "wordpress-plugin",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/times/acf-to-wp-api",
+          "reference": "origin"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.3.2.2",
+        "type": "wordpress-muplugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9Mzg1Mzl8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA4LTI5IDIxOjIzOjQ4&t=5.3.2.2"
+        }
+      }
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "johnpbloch/wordpress": "4.4",
+    "composer/installers": "v1.0.21",
+    "wp-api/basic-auth": "*",
+    "wp-api/wp-api": "2.0-beta9",
+    "times/acf-wp-api": "1.3.2",
+    "advanced-custom-fields/advanced-custom-fields-pro": "5.3.2.2"
+  },
+  "extra": {
+    "installer-paths": {
+      "cms/content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "cms/content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "cms/content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "cms/wp"
+  }
+
+}

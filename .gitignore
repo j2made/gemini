@@ -1,0 +1,16 @@
+# Configured Files
+cms/env.php
+cms/wp-config.php
+
+# CMS (Wordpress) Ignores
+cms/wp/*
+!cms/wp/.gitkeep
+cms/content/uploads/*
+!cms/content/uploads/.gitkeep
+cms/content/plugins/*
+!cms/content/plugins/.gitkeep
+cms/content/themes/*
+!cms/content/themes/.gitkeep
+cms/content/mu-plugins/*
+!cms/content/mu-plugins/.gitkeep
+
