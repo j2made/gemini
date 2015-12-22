@@ -52,47 +52,14 @@ register_theme_directory(ABSPATH . 'wp-content/themes');
 
 
 
-
 /**
- * Determine SE Indexing
- * ---------------------
- * Set Search Engine indexing to all enviornments except production
+ * SET SE Indexing to False
+ * ------------------------
+ * No need for Search Engines to know the CMS exists.
  *
  * @since  1.0.0
  */
-class Gemini_Determine_Indexing {
-
-  private static $single;
-  private static $indexing;
-
-  /**
-   * Turn indexing off if any env except production
-   */
-  public function __construct() {
-
-    if (isset(self::$_single)) { return; }
-
-    self::$single = $this;
-
-    add_action( 'wp_loaded', array($this, 'set_indexing') );
-
-  }
-
-  public function set_indexing() {
-    self::$indexing = '';
-
-    if( defined( "GEMINI_ENV" ) ) {
-      if ( GEMINI_ENV !== 'production') add_filter( 'pre_option_blog_public', '__return_false' );
-    } else {
-      add_filter( 'pre_option_blog_public', '__return_true' );
-    }
-
-
-  }
-
-}
-
-new Gemini_Determine_Indexing;
+add_filter( 'pre_option_blog_public', '__return_false' );
 
 
 

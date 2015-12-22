@@ -28,8 +28,6 @@ The boilerplace includes a theme, *Skylab*, which a barest of barebone theme tha
 
 Gemini is *not* a framework. Gemini is *not* a typical, useful Wordpress theme out of the box. Gemini is *not* a javascript REST API anything out of the box.
 
-To be honest, there are tons of options you have available. This
-
-Gemini is, at its most basic, an opinionated way of arranging files to keep Wordpress and your future app together in one primary folder. Nothing too fancy.
+To be honest, there are tons of js framework options available. And one might be better suited than another depending on the project. Gemini is, at its most basic, an opinionated way of arranging files to keep Wordpress and your future app together in one primary folder. Nothing fancy.
 
 
