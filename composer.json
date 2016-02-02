@@ -88,15 +88,15 @@
           "reference": "origin"
         }
       }
-    },
+    }
   ],
   "require": {
     "php": ">=5.4",
-    "johnpbloch/wordpress": "4.4.2",
     "composer/installers": "v1.0.21",
+    "johnpbloch/wordpress": "4.4.1",
     "wp-api/basic-auth": "*",
     "wp-api/wp-api": "2.0-beta9",
-    "times/acf-wp-api": "1.3.2",
+    "times/acf-wp-api": "1.3.3"
   },
   "extra": {
     "installer-paths": {
