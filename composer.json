@@ -42,7 +42,7 @@
       "package": {
         "name": "wp-api/basic-auth",
         "version": "0.1.0",
-        "type": "wordpress-muplugin",
+        "type": "wordpress-plugin",
         "source": {
           "type": "git",
           "url": "https://github.com/WP-API/Basic-Auth",
@@ -53,8 +53,21 @@
     {
       "type": "package",
       "package": {
+        "name": "wp-api/oauth1",
+        "version": "0.1.0",
+        "type": "wordpress-plugin",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/WP-API/OAuth1",
+          "reference": "origin"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
         "name": "wp-api/wp-api",
-        "version": "2.0-beta9",
+        "version": "2.0-beta11",
         "type": "wordpress-muplugin",
         "source": {
           "type": "git",
@@ -67,7 +80,7 @@
       "type": "package",
       "package": {
         "name": "times/acf-wp-api",
-        "version": "1.3.2",
+        "version": "1.3.3",
         "type": "wordpress-plugin",
         "source": {
           "type": "git",
@@ -79,7 +92,7 @@
   ],
   "require": {
     "php": ">=5.4",
-    "johnpbloch/wordpress": "4.4",
+    "johnpbloch/wordpress": "4.4.2",
     "composer/installers": "v1.0.21",
     "wp-api/basic-auth": "*",
     "wp-api/wp-api": "2.0-beta9",
