@@ -22,20 +22,24 @@ use Gemini\Inc\PostTypes;
 //    * Name of taxonmy
 //    * @var string
 //    */
-//   $name   = 'Taxonomy';
+//   $name     = 'Tax Name';
+//   $name_alt = strtolower($name);
+//   $name_alt = preg_replace("/[^a-z0-9_\s-]/", "", $name_alt);
+//   $name_alt = preg_replace("/[\s-]+/", " ", $name_alt);
+//   $name_alt = preg_replace("/[\s_]/", "-", $name_alt);
 
 //   /**
 //    * Labels for taxonomy
 //    * @var array  pass $name, $singluar, $plural to label_factory
 //    */
-//   $labels = PostTypes\label_factory($name, 'Taxonomy', 'Taxonomies');
+//   $labels = PostTypes\label_factory($name);
 
 //   /**
 //    * Rewrite
 //    * @var array
 //    */
 //   $rewrite = array(
-//     'slug'                       => 'taxonomy',
+//     'slug'                       => $name_alt,
 //     'with_front'                 => true,
 //     'hierarchical'               => false,
 //   );
@@ -44,20 +48,23 @@ use Gemini\Inc\PostTypes;
 //    * @var array
 //    */
 //   $args = array(
-//     'labels'                     => $labels,
-//     'hierarchical'               => true,
-//     'public'                     => true,
-//     'show_ui'                    => true,
-//     'show_admin_column'          => true,
-//     'show_in_nav_menus'          => false,
-//     'show_tagcloud'              => true,
-//     'rewrite'                    => $rewrite,
+//     'labels'                      => $labels,
+//     'hierarchical'                => true,
+//     'public'                      => true,
+//     'show_ui'                     => true,
+//     'show_admin_column'           => true,
+//     'show_in_nav_menus'           => false,
+//     'show_tagcloud'               => true,
+//     'rewrite'                     => $rewrite,
+//     'show_in_rest'                => true,
+//     'rest_base'                   => strtolower($name_alt),
+//     'rest_controller_class'       => 'WP_REST_Terms_Controller',
 //   );
 
-//   register_taxonomy( 'gemini_tax_name', array( 'gemini_cpt_type_name' ), $args );
+//   register_taxonomy( 'destination_details', array( 'locations' ), $args );
 
 // }
-// add_action( 'init', __NAMESPACE__ . '\Gemini_Tax', 0 );
+// add_action( 'init', __NAMESPACE__ . '\\Gemini_Tax', 0 );
 
 
 
