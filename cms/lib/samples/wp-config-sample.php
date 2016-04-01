@@ -13,20 +13,25 @@
  */
 define("GEMINI_ENV", "development");
 
-
-/**
- * Database Definitions
- */
+/** Database Definitions */
 define("DB_NAME", "db_name");
 define("DB_USER", "db_user");
 define("DB_PASSWORD", "db_pass");
 define("DB_HOST", "localhost");
 
-/**
- * Site URL Definitions
- */
+/** Site URL Definitions */
 define("WP_HOME", "http://cms.example.com/");
 define("WP_SITEURL", "http://cms.example.com/wp");
+
+/**
+ * Gemini App Definitions
+ * Creates link for wp index page.
+ *
+ * Set to false to show nothing, or something like "http://app.example.com".
+ */
+define("GEMINI_APP_URL", false);
+
+
 
 
 /**
