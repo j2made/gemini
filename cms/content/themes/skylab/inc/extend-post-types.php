@@ -69,55 +69,56 @@ function label_factory($name, $singular = '', $plural = '' ) {
  * @wp_hook   init
  * @since  1.0.0
  */
-function Gemini_CPT() {
 
-  /**
-   * Name of CPT
-   * @var string
-   */
-  $name = 'Name';
-  $name_alt = strtolower($name);
-  $name_alt = preg_replace("/[^a-z0-9_\s-]/", "", $name_alt);
-  $name_alt = preg_replace("/[\s-]+/", " ", $name_alt);
-  $name_alt = preg_replace("/[\s_]/", "-", $name_alt);
+// function Gemini_CPT() {
 
-  /**
-   * Labels
-   * @var array  pass $name, $singluar, $plural to label_factory
-   */
-  $labels = label_factory($name);
+//   /**
+//    * Name of CPT
+//    * @var string
+//    */
+//   $name = 'Name';
+//   $name_alt = strtolower($name);
+//   $name_alt = preg_replace("/[^a-z0-9_\s-]/", "", $name_alt);
+//   $name_alt = preg_replace("/[\s-]+/", " ", $name_alt);
+//   $name_alt = preg_replace("/[\s_]/", "-", $name_alt);
 
-  /**
-   * Custom Post Type Args
-   * @var array
-   */
-  $args = array(
-    'label'                 => $name,
-    'labels'                => $labels,
-    // 'supports'              => array( 'title', ),
-    // 'taxonomies'            => array( 'taxonomy' ),
-    'hierarchical'          => true,
-    'public'                => true,
-    'show_ui'               => true,
-    'show_in_menu'          => true,
-    'menu_position'         => 20,
-    'menu_icon'             => 'dashicons-admin-post',
-    // 'rewrite'               => array( 'slug' => $name_alt ),
-    'show_in_admin_bar'     => true,
-    'show_in_nav_menus'     => false,
-    'can_export'            => true,
-    'has_archive'           => true,
-    'exclude_from_search'   => false,
-    'publicly_queryable'    => true,
-    'capability_type'       => 'page',
-    'show_in_rest'          => true,
-    'rest_base'             => $name_alt,
-    'rest_controller_class' => 'WP_REST_Posts_Controller'
-  );
+//   /**
+//    * Labels
+//    * @var array  pass $name, $singluar, $plural to label_factory
+//    */
+//   $labels = label_factory($name);
 
-  register_post_type( 'locations', $args );
+//   /**
+//    * Custom Post Type Args
+//    * @var array
+//    */
+//   $args = array(
+//     'label'                 => $name,
+//     'labels'                => $labels,
+//     // 'supports'              => array( 'title', ),
+//     // 'taxonomies'            => array( 'taxonomy' ),
+//     'hierarchical'          => true,
+//     'public'                => true,
+//     'show_ui'               => true,
+//     'show_in_menu'          => true,
+//     'menu_position'         => 20,
+//     'menu_icon'             => 'dashicons-admin-post',
+//     // 'rewrite'               => array( 'slug' => $name_alt ),
+//     'show_in_admin_bar'     => true,
+//     'show_in_nav_menus'     => false,
+//     'can_export'            => true,
+//     'has_archive'           => true,
+//     'exclude_from_search'   => false,
+//     'publicly_queryable'    => true,
+//     'capability_type'       => 'page',
+//     'show_in_rest'          => true,
+//     'rest_base'             => $name_alt,
+//     'rest_controller_class' => 'WP_REST_Posts_Controller'
+//   );
 
-}
-add_action( 'init', __NAMESPACE__ . '\\Gemini_CPT', 0 );
+//   register_post_type( 'locations', $args );
+
+// }
+// add_action( 'init', __NAMESPACE__ . '\\Gemini_CPT', 0 );
 
 
