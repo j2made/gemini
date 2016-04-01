@@ -36,11 +36,12 @@ namespace Gemini\Inc\Core;
  * @since   1.0.0
  */
 
-// function mime_types($mimes) {
+// function MIME_Types($mimes) {
 //   $mimes['svg'] = 'image/svg+xml';
 //   return $mimes;
 // }
-// add_filter('upload_mimes',  __NAMESPACE__ . '\\mime_types');
+// add_filter('upload_mimes',  __NAMESPACE__ . '\\MIME_Types');
+
 
 
 /**
@@ -53,7 +54,7 @@ namespace Gemini\Inc\Core;
  * @since   1.0.0
  */
 
-// function fix_svg_thumb_display() {
+// function Fix_SVG_Thumb_Display() {
 //   echo '
 //     <style type="text/css">
 //       td.media-icon img[src$=".svg"], img[src$=".svg"].attachment-post-thumbnail {
@@ -64,6 +65,6 @@ namespace Gemini\Inc\Core;
 //   ';
 // }
 
-// add_action('admin_head',  __NAMESPACE__ . '\\fix_svg_thumb_display');
+// add_action('admin_head',  __NAMESPACE__ . '\\Fix_SVG_Thumb_Display');
 
 

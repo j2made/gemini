@@ -32,17 +32,14 @@ if(function_exists("register_options_page")) {
 
 /**
  * Customize ACF Admin Display.
- */
-add_filter( 'acf/fields/wysiwyg/toolbars', __NAMESPACE__ . '\\acf_wysiwyg_toolbars' );
-
-
-/**
  * Removes WYSIWYG buttons from default ACF WYSIWYG
  *
- * @acf_hook            acf/fields/wysiwyg/toolbars
  * @return    array     array of allowed buttons in toolbars
+ * @since  1.0.0
  */
-function acf_wysiwyg_toolbars( $toolbars ) {
+add_filter( 'acf/fields/wysiwyg/toolbars', __NAMESPACE__ . '\\ACF_WYSIWYG_Toolbars' );
+
+function ACF_WYSIWYG_Toolbars( $toolbars ) {
 
   $toolbar_options = array(
     'bold',

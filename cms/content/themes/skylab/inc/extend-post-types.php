@@ -25,7 +25,7 @@ namespace Gemini\Inc\PostTypes;
  * @param  string $plural   Plural form of name, defaults to $name with 's'
  * @return array            array of labels
  */
-function label_factory($name, $singular = '', $plural = '' ) {
+function Label_Factory($name, $singular = '', $plural = '' ) {
   if( empty($singular) )
     $plural = $name;
 
@@ -84,9 +84,9 @@ function label_factory($name, $singular = '', $plural = '' ) {
 
 //   /**
 //    * Labels
-//    * @var array  pass $name, $singluar, $plural to label_factory
+//    * @var array  pass $name, $singluar, $plural to Label_Factory
 //    */
-//   $labels = label_factory($name);
+//   $labels = Label_Factory($name);
 
 //   /**
 //    * Custom Post Type Args

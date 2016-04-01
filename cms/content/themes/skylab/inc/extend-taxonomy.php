@@ -30,9 +30,9 @@ use Gemini\Inc\PostTypes;
 
 //   /**
 //    * Labels for taxonomy
-//    * @var array  pass $name, $singluar, $plural to label_factory
+//    * @var array  pass $name, $singluar, $plural to Label_Factory
 //    */
-//   $labels = PostTypes\label_factory($name);
+//   $labels = PostTypes\Label_Factory($name);
 
 //   /**
 //    * Rewrite

@@ -38,7 +38,7 @@ if ( GEMINI_ENV === 'development' ) {
  * @wp_hook   after_setup_theme
  * @since     1.0.0
  */
-function theme_setup() {
+function Theme_Setup() {
 
   /**
    * Register Nav Menu
@@ -63,10 +63,10 @@ function theme_setup() {
    */
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
-  add_editor_style( TEMPLATEPATH . 'styles.css');
   add_theme_support( 'html5', [
     'comment-list', 'comment-form', 'search-form', 'gallery', 'caption'
   ] );
+  // add_editor_style( TEMPLATEPATH . 'styles.css');
 
   /**
    * Post Formats
@@ -81,7 +81,7 @@ function theme_setup() {
   // ]);
 }
 
-add_action('after_setup_theme', __NAMESPACE__ . '\\theme_setup');
+add_action('after_setup_theme', __NAMESPACE__ . '\\Theme_Setup');
 
 
 
