@@ -25,8 +25,8 @@ define("DB_HOST", "localhost");
 /**
  * Site URL Definitions
  */
-define("WP_HOME", "http://example.com/cms");
-define("WP_SITEURL", "http://example.com/cms/wp");
+define("WP_HOME", "http://cms.example.com/");
+define("WP_SITEURL", "http://cms.example.com/wp");
 
 
 /**
