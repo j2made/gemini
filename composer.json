@@ -24,7 +24,8 @@
   },
   "config": {
     "preferred-install": "dist",
-    "vendor-dir": "lib/vendor/"
+    "vendor-dir": "lib/vendor/",
+    "secure-http": false
   },
   "scripts": {
     "pre-install-cmd": [
