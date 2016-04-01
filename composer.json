@@ -68,7 +68,7 @@
       "type": "package",
       "package": {
         "name": "wp-api/wp-api",
-        "version": "2.0-beta11",
+        "version": "2.0-beta13",
         "type": "wordpress-muplugin",
         "source": {
           "type": "git",
@@ -94,9 +94,9 @@
   "require": {
     "php": ">=5.4",
     "composer/installers": "v1.0.21",
-    "johnpbloch/wordpress": "4.4.1",
+    "johnpbloch/wordpress": "4.4.2",
     "wp-api/basic-auth": "*",
-    "wp-api/wp-api": "2.0-beta9",
+    "wp-api/wp-api": "2.0-beta13",
     "times/acf-wp-api": "1.3.3"
   },
   "extra": {
