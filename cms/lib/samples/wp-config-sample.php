@@ -27,7 +27,7 @@ define("WP_SITEURL", "http://cms.example.com/wp");
  * Gemini App Definitions
  * Creates link for wp index page.
  *
- * Set to false to show nothing, or something like "http://app.example.com".
+ * Set to false to show nothing, or something like "https://app.example.com".
  */
 define("GEMINI_APP_URL", false);
 

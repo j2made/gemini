@@ -5,12 +5,11 @@ A boilerplate built for decoupled development using Wordpress as a CMS.
 
 ## Gemini Intent
 
-Gemini is a boilerplate to be used as a foundation for developing an application that decouples Wordpress from the front end. Wordpress will only be used as a CMS, and the front end framework, such as Angular or Ember, is left up to you.
-
+Gemini is a boilerplate to be used as a foundation for developing an application that decouples Wordpress from the front end. Wordpress will only be used as a CMS, and the front end framework, such as React, Angular or Ember, is left up to you.
 
 The Wordpress CMS and the application live within the same directory tree. Wordpress lives at `/cms`, the front-end lives at `/app`. This means that, if used in production, they will both operate on the same server, and access points will be available through the parent domain (with a login living at `example.com/cms/wp/wp-login.php`).
 
-The boilerplace includes a theme, *Skylab*, which a barest of barebone theme that only displays a 404 style page. The purpose of the theme is only to inject functions you need to build and change the Wordpress backend.
+The boilerplace includes a theme, *Skylab*, which a barest of barebone theme that only displays a 404 style page. The purpose of the theme is only to inject functions you need to build and change the Wordpress backend and the API.
 
 
 ### "Cool, its a ready to use REST API theme."

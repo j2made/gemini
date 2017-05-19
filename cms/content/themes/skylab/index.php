@@ -3,9 +3,9 @@
   /**
    * Redirect if valid app url is provided
    */
-  if(GEMINI_APP_URL) {
+  if ( GEMINI_APP_URL ) {
 
-    if( filter_var(GEMINI_APP_URL, FILTER_VALIDATE_URL) ) {
+    if ( filter_var( GEMINI_APP_URL, FILTER_VALIDATE_URL ) ) {
       wp_redirect( GEMINI_APP_URL );
     }
 
