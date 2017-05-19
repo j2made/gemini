@@ -28,6 +28,9 @@
     "secure-http": false
   },
   "scripts": {
+    "pre-update-cmd": [
+      "php -r \"if(!file_exists('cms/wp-config.php')) { copy('cms/lib/samples/wp-config-sample.php', 'cms/wp-config.php'); }\""
+    ],
     "pre-install-cmd": [
       "php -r \"if(!file_exists('cms/wp-config.php')) { copy('cms/lib/samples/wp-config-sample.php', 'cms/wp-config.php'); }\""
     ]
