@@ -8,31 +8,26 @@ use Gemini\Inc\PostTypes;
  *
  * Uses label factory from `inc/extend-post-types`
  * Uncomment to use.
- * Replace `Gemini_Tax()` with `YourTaxname_Tax()`
- * Replace `gemini_tax_name` with your Taxonomy name
- * Replace `gemini_cpt_type_name` with linked CPT name
  *
- * @wp_hook   init
- * @since     1.0.0
+ * @package Gemini
+ * @version 1.0.0
+ * @since  1.0.0
+ *
  */
 
 // function Gemini_Tax() {
 
-//   /**
-//    * Name of taxonmy
-//    * @var string
-//    */
-//   $name     = 'Tax Name';
+//   $name     = 'TAXONOMY NAME';
 //   $name_alt = strtolower($name);
 //   $name_alt = preg_replace("/[^a-z0-9_\s-]/", "", $name_alt);
 //   $name_alt = preg_replace("/[\s-]+/", " ", $name_alt);
 //   $name_alt = preg_replace("/[\s_]/", "-", $name_alt);
 
 //   /**
-//    * Labels for taxonomy
+//    * Labels
 //    * @var array  pass $name, $singluar, $plural to Label_Factory
 //    */
-//   $labels = PostTypes\Label_Factory($name);
+//   $labels = Label_Factory($name);
 
 //   /**
 //    * Rewrite
@@ -57,13 +52,14 @@ use Gemini\Inc\PostTypes;
 //     'show_tagcloud'               => true,
 //     'rewrite'                     => $rewrite,
 //     'show_in_rest'                => true,
-//     'rest_base'                   => strtolower($name_alt),
+//     'rest_base'                   => $name_alt,
 //     'rest_controller_class'       => 'WP_REST_Terms_Controller',
 //   );
 
-//   register_taxonomy( 'destination_details', array( 'locations' ), $args );
+//   register_taxonomy( $name_alt, array( 'ASSOCIATED POST TYPE' ), $args );
 
 // }
+
 // add_action( 'init', __NAMESPACE__ . '\\Gemini_Tax', 0 );
 
 

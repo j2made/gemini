@@ -55,9 +55,14 @@ function Theme_Setup() {
   /**
    * Add Theme Support:
    *
-   * Title Tag          http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
-   * Post Thumbnails    https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-   * HTML5              https://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
+   * Title Tag
+   * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
+   *
+   * Post Thumbnails
+   * @link https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+   *
+   * HTML5
+   * @link https://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
    *
    * @since  1.0.0
    */
@@ -66,6 +71,12 @@ function Theme_Setup() {
   add_theme_support( 'html5', [
     'comment-list', 'comment-form', 'search-form', 'gallery', 'caption'
   ] );
+
+  /**
+   * Add Styles to WYSIWYG
+   * Uncomment to use
+   *
+   */
   // add_editor_style( TEMPLATEPATH . 'styles.css');
 
   /**
@@ -79,6 +90,7 @@ function Theme_Setup() {
   // add_theme_support('post-formats', [
   //  'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'
   // ]);
+
 }
 
 add_action('after_setup_theme', __NAMESPACE__ . '\\Theme_Setup');

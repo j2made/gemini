@@ -3,10 +3,7 @@
 namespace Gemini\Inc\PostTypes;
 
 /**
- * Functions to alter the appearance of WP admin pages
- *
- * If there are alterations to the WP Admin in regard to the
- * REST API, that code should be includec in `inc/extend-rest-api.php`
+ * Add Custom Post Types
  *
  * @package Gemini
  * @version 1.0.0
@@ -25,12 +22,15 @@ namespace Gemini\Inc\PostTypes;
  * @param  string $plural   Plural form of name, defaults to $name with 's'
  * @return array            array of labels
  */
-function Label_Factory($name, $singular = '', $plural = '' ) {
-  if( empty($singular) )
-    $plural = $name;
+function Label_Factory( $name, $singular = '', $plural = '' ) {
 
-  if( empty($plural) )
+  if ( empty( $singular ) ) {
+    $singular = $name;
+  }
+
+  if ( empty( $plural ) ) {
     $plural = $singular . 's';
+  }
 
   $labels = array(
     'name'                  => $name,
@@ -73,7 +73,8 @@ function Label_Factory($name, $singular = '', $plural = '' ) {
 // function Gemini_CPT() {
 
 //   /**
-//    * Name of CPT
+//    * Name of CPT - name will be setup for rest route
+//    *
 //    * @var string
 //    */
 //   $name = 'Name';
